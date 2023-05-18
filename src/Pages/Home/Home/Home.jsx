@@ -1,15 +1,13 @@
 import React from 'react';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
-import Login from '../../Login/Login';
-import SignUp from '../../SignUp/SignUp';
+import Bannar from '../Bannar/Bannar';
 
 const Home = () => {
     return (
         <div>
             <Header></Header>
-            <SignUp></SignUp>
-            <Login></Login>
+            <Bannar></Bannar>
             <Footer></Footer>
         </div>
     );

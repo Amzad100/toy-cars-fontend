@@ -30,12 +30,12 @@ const Header = () => {
             </div>
             <div className="navbar-end">
                 <div className="avatar online">
-                    <div className="w-20 rounded-full">
+                    <div className="w-12 rounded-full">
                         <img src="https://i.ibb.co/RCYkvbq/2.jpg" />
                     </div>
                 </div>
                 <div className="avatar offline">
-                    <div className="w-20 rounded-full">
+                    <div className="w-12 rounded-full">
                         <img src="https://i.ibb.co/RCYkvbq/2.jpg" />
                     </div>
                 </div>
