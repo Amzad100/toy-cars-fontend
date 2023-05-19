@@ -9,7 +9,7 @@ const ErrorPage = () => {
                 <div className="max-w-md">
                     <h1 className="mb-5 text-5xl text-red-400 font-bold">OPPS! PAGE NOT BE FOUND</h1>
                     <p className="mb-5">Sorry but the page you are looking for does not exist, have been removed, name changed or is temporarity unavailable.</p>
-                    <Link className="btn btn-error" to='/'>Go Back Home</Link>
+                    <Link className="btn btn-error" to='/'>Back to home</Link>
                 </div>
             </div>
         </div>
