@@ -1,0 +1,68 @@
+[
+    {
+        "category_id": "01",
+        "category_name": "Sports Cars",
+        "toy_name": "Scale Toy Sports Cars with Door",
+        "picture": "https://i.ibb.co/yd5pz17/71-Xy2-Pics-WL-AC-SX679.jpg",
+        "price": "20.00",
+        "sub_category": "Engine Oil Change",
+        "seller": "",
+        "rating": "4.1",
+        "available_quantity": "10"
+    },
+    {
+        "category_id": "02",
+        "category_name": "Sports Cars",
+        "toy_name": "LEGO Creator 3in1 Sports Car Toy",
+        "picture": "https://i.ibb.co/0VDxqQV/81-Bet69-RFOL-AC-SX679.jpg",
+        "price": "20.00",
+        "sub_category": "Engine Oil Change",
+        "seller": "",
+        "rating": "4.2",
+        "available_quantity": "20"
+    },
+    {
+        "category_id": "03",
+        "category_name": "Police Cars",
+        "toy_name": "Micro Police SUV",
+        "picture": "https://i.ibb.co/RYW4N8z/71jr-SZJji-HL-AC-SX679.jpg",
+        "price": "200.00",
+        "sub_category": "Engine Oil Change",
+        "seller": "",
+        "rating": "4.3",
+        "available_quantity": "30"
+    },
+    {
+        "category_id": "04",
+        "category_name": "Police Cars",
+        "toy_name": "Charger Police Car Die-Cast Car",
+        "picture": "https://i.ibb.co/jk8t5Y7/61-Yi-HOa-Ff5-L-AC-SX679.jpg",
+        "price": "150.00",
+        "sub_category": "Engine Oil Change",
+        "seller": "",
+        "rating": "4.5",
+        "available_quantity": "40"
+    },
+    {
+        "category_id": "05",
+        "category_name": "Truck",
+        "toy_name": "Melissa & Doug Magnetic Car Loader Wooden Toy Set With 4 Cars and 1 Semi-Trailer Truck ",
+        "picture": "https://i.ibb.co/H4kjXVS/710-Y-unl-ZNL-AC-SX679.jpg",
+        "price": "30.00",
+        "sub_category": "Engine Oil Change",
+        "seller": "",
+        "rating": "4.6",
+        "available_quantity": "50"
+    },
+    {
+        "category_id": "06",
+        "category_name": "Truck",
+        "toy_name": "John Deere Sandbox Toys Vehicle Set - Includes Dump Truck Toy",
+        "picture": "https://i.ibb.co/YtBCfrz/71-Nt2-K5-Ss-ML-AC-SX679.jpg",
+        "price": "20.00",
+        "sub_category": "Engine Oil Change",
+        "seller": "",
+        "rating": "4.4",
+        "available_quantity": "60"
+    }
+]

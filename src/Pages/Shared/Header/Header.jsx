@@ -1,9 +1,18 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Authcontext } from '../../../Providers/AuthProvider';
 
 const Header = () => {
-    const { user, logOut } = useContext(Authcontext)
+    const { user, logOut } = useContext(Authcontext);
+    const [isHovering, setIsHovering] = useState(false);
+
+    const handleMouseEnter = () => {
+        setIsHovering(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsHovering(false);
+    };
 
     const handleLogout = () => {
         logOut()
@@ -31,23 +40,31 @@ const Header = () => {
                 <ul className="menu menu-horizontal px-1">
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/alltoys'>All Toys</Link></li>
-                    <li><Link to='/mytoys'>My Toys</Link></li>
-                    <li><Link to='/addatoy'>Add A Toy</Link></li>
+                    {
+                        user?.email ? <>
+                            <li><Link to='/mytoys'>My Toys</Link></li>
+                            <li><Link to='/addtoy'>Add A Toy</Link></li>
+                        </> :
+                            <></>
+                    }
                     <li><Link to='/blogs'>Blogs</Link></li>
                 </ul>
             </div>
             <div className="navbar-end">
                 {
-                    user ? <>
-                        <div className="avatar online">
+                    user && <>
+                        <small className='mr-2'>{isHovering && <small>{user.displayName}</small>}</small>
+                        <div onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseEnter} className="avatar online">
                             <div className="w-14 rounded-full">
-                                <img src="https://i.ibb.co/RCYkvbq/2.jpg" />
+                                <img src={user?.photoURL} />
                             </div>
                         </div>
-                        <div className="ml-3">
-                            <button onClick={handleLogout} className='btn'>LogOut</button>
-                        </div>
-                    </> :
+                    </>
+                }
+                {
+                    user ? <><div className="ml-3">
+                        <button onClick={handleLogout} className='btn'>LogOut</button>
+                    </div></> :
                         <Link to='/login'><button className='btn'>logIn</button></Link>
                 }
             </div>

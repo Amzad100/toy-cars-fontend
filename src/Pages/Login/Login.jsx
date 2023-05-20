@@ -3,12 +3,29 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Header from '../Shared/Header/Header';
 import Footer from '../Shared/Footer/Footer';
 import { Authcontext } from '../../Providers/AuthProvider';
+import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
+import app from '../../firebase/firebase.config';
+
+const auth = getAuth(app);
 
 const Login = () => {
     const { signIn } = useContext(Authcontext);
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
+
+    const googleProvider = new GoogleAuthProvider();
+
+    const handleGoogleSingIn = () => {
+        signInWithPopup(auth, googleProvider)
+            .then(result => {
+                const loggedInUser = result.user;
+                setUser(loggedInUser);
+            })
+            .catch(error => {
+                console.log('error', error.message)
+            })
+    }
 
     const handleLogin = event => {
         event.preventDefault();
@@ -52,6 +69,7 @@ const Login = () => {
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>
+                                <button type='submit' onClick={handleGoogleSingIn} className="mt-2 btn btn-primary">Google Login</button>
                             </div>
                             <p className='text-center'>Do you new Toy Cars? <Link className='text-orange-500 font-bold' to='/signup'> SignUP</Link></p>
                         </div>
