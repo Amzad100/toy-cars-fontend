@@ -3,6 +3,12 @@ import SingleCard from './SingleCard';
 
 const ShopByCategory = () => {
     const [cars, setCars] = useState([]);
+    const [activeTab, setActiveTab] = useState('sports_car');
+
+    const handleTabClick = (tabname) => {
+        setActiveTab(tabname);
+    }
+
 
     useEffect(() => {
         fetch('http://localhost:5000/toys')
@@ -13,13 +19,13 @@ const ShopByCategory = () => {
         <div className='text-center'>
             <h1 className='text-center text-3xl font-bold my-5'>Shop By Category : {cars.length}</h1>
             <div className="tabs tabs-boxed text-center">
-                <div className="tab tab-active">
+                <div onClick={() => handleTabClick("sports_car")} className={`tab ${activeTab == 'sports_car' ? "tab-active" : ""}`}>
                     Sports Cars
                 </div>
-                <div className="tab ">
+                <div onClick={() => handleTabClick("police_car")} className={`tab ${activeTab == 'police_car' ? "tab-active" : ""}`}>
                     Police Cars
                 </div>
-                <div className="tab ">
+                <div onClick={() => handleTabClick("truck")} className={`tab ${activeTab == 'truck' ? "tab-active" : ""}`}>
                     Truck
                 </div>
             </div>
