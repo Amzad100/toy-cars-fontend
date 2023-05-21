@@ -8,7 +8,7 @@ const Alltoys = () => {
     const [searshtest, setSearchtext] = useState("")
 
     useEffect(() => {
-        fetch('http://localhost:5000/alltoys')
+        fetch('https://b7a11-toy-marketplace-server-side-amzad100-amzad100.vercel.app/alltoys')
             .then(res => res.json())
             .then(result => {
                 setToys(result)

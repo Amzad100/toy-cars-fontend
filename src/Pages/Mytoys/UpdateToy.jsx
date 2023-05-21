@@ -14,7 +14,7 @@ const UpdateToy = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
     const handleUpdate = id => {
-        fetch(`http://localhost:5000/mytoys/${id}`)
+        fetch(`https://b7a11-toy-marketplace-server-side-amzad100-amzad100.vercel.app/mytoys/${id}`)
             .then(res => res.json())
             .then(result => {
                 if (register.modifieCount > 0) {
@@ -24,14 +24,14 @@ const UpdateToy = () => {
     }
 
     const onSubmit = (data) => {
-        fetch(`http://localhost:5000/mytoys/${_id}`, {
+        fetch(`https://b7a11-toy-marketplace-server-side-amzad100-amzad100.vercel.app/mytoys/${_id}`, {
             method: 'PATCH',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)
         })
             .then(res => res.json())
             .then(result => {
-                console.log(result);
+
             })
     }
     return (

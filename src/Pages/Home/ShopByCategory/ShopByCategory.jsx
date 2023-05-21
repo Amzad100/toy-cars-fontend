@@ -6,7 +6,7 @@ const ShopByCategory = () => {
     const [activeTab, setActiveTab] = useState("SportsCars");
 
     useEffect(() => {
-        fetch(`http://localhost:5000/alltoys/${activeTab}`)
+        fetch(`https://b7a11-toy-marketplace-server-side-amzad100-amzad100.vercel.app/alltoys/${activeTab}`)
             .then((res) => res.json())
             .then((data) => {
                 setCars(data)
