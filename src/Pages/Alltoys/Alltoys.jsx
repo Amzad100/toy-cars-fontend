@@ -5,6 +5,7 @@ import Singletoy from './Singletoy';
 
 const Alltoys = () => {
     const [toys, setToys] = useState([]);
+    const [searshtest, setSearchtext] = useState("")
 
     useEffect(() => {
         fetch('http://localhost:5000/alltoys')
@@ -16,7 +17,10 @@ const Alltoys = () => {
     return (
         <div>
             <Header></Header>
-            <h1 className='text-center text-6xl font-bold'>all toy page:</h1>
+            <div className="input-group my-12 ml-96">
+                <input onChange={(e) => setSearchtext(e.target.value)} type="text" placeholder="Search…" className="input input-bordered" />
+                <button className="btn btn-primary">Search</button>
+            </div>
             <div className="overflow-x-auto">
                 <table className="table table-compact w-full">
                     <thead>

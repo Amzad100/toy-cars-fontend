@@ -14,7 +14,25 @@ const Mytoys = () => {
             .then(result => {
                 setCars(result)
             })
-    }, [user])
+    }, [user]);
+
+    const handleDelete = id => {
+        const proceed = confirm('Are you sure you went to delete')
+        if (proceed) {
+            fetch(`http://localhost:5000/mytoys/${id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(result => {
+                    console.log(result);
+                    if (result.deletedCount > 0) {
+                        alert('Deleted Successfully');
+                        const remaining = cars.filter(car => car._id !== id);
+                        setCars(remaining)
+                    }
+                })
+        }
+    }
     return (
         <div>
             <Header></Header>
@@ -23,13 +41,13 @@ const Mytoys = () => {
                 <table className="table table-compact w-full">
                     <thead>
                         <tr>
-                            <th></th>
-                            <th>Seller Name</th>
                             <th>Toy Name</th>
-                            <th>Sub-category</th>
                             <th>Price</th>
-                            <th>Available Quantity</th>
-                            <th>View Details</th>
+                            <th>Rating</th>
+                            <th>Quantity</th>
+                            <th>Sub Category</th>
+                            <th>Update</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -37,6 +55,7 @@ const Mytoys = () => {
                             cars.map(car => <SingleMytoy
                                 key={car._id}
                                 car={car}
+                                handleDelete={handleDelete}
                             ></SingleMytoy>)
                         }
                     </tbody>
