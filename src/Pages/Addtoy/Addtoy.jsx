@@ -7,7 +7,18 @@ import { Authcontext } from '../../Providers/AuthProvider';
 const Addtoy = () => {
     const { user } = useContext(Authcontext)
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = (data) => {
+        fetch('http://localhost:5000/addtoy', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result);
+            })
+        console.log(data);
+    }
     return (
         <div>
             <Header></Header>
@@ -47,8 +58,8 @@ const Addtoy = () => {
                         <div>
                             <h1 className='font-bold my-1'>Sub Category </h1>
                             <select className="input input-bordered w-full max-w-xl" {...register("category_name")}>
-                                <option value="Sports Cars">Sports Cars</option>
-                                <option value="Police Cars">Police Cars</option>
+                                <option value="SportsCars">Sports Cars</option>
+                                <option value="PoliceCars">Police Cars</option>
                                 <option value="Truck">Truck</option>
                             </select>
                         </div>
@@ -57,7 +68,7 @@ const Addtoy = () => {
                             <textarea type="text" placeholder='Detail description' className="textarea textarea-bordered w-full max-w-xl" {...register("detail_description")} />
                         </div>
                         <div className='text-center'>
-                            <input  type="submit" value='Add a toy' className='w-full max-w-xl mt-8 btn btn-primary' />
+                            <input type="submit" value='Add a toy' className='w-full max-w-xl mt-8 btn btn-primary' />
                         </div>
                     </div>
                     {/* errors will return when field validation fails  */}
