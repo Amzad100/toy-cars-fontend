@@ -8,27 +8,24 @@ const Footer = () => {
             <footer className="footer p-10 bg-slate-100 text-base-content mt-5">
                 <div>
                     <Link to='/'><h1 className='text-3xl font-bold'>Toy Cars</h1></Link>
-                    <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
+                    <p>Toy Industries Ltd.<br />Providing reliable tech since 2023</p>
                 </div>
                 <div>
                     <span className="footer-title">Services</span>
-                    <a className="link link-hover">Branding</a>
-                    <a className="link link-hover">Design</a>
-                    <a className="link link-hover">Marketing</a>
-                    <a className="link link-hover">Advertisement</a>
+                    <Link className='link-hover' to='/alltoys'>All Toy</Link>
+                    <Link className='link-hover' to='/mytoys'>My Toy</Link>
+                    <Link className='link-hover' to='/addtoy'>Add Toy</Link>
+                    <Link className='link-hover' to='/blogs'>Blog</Link>
                 </div>
                 <div>
                     <span className="footer-title">Company</span>
-                    <a className="link link-hover">About us</a>
-                    <a className="link link-hover">Contact</a>
-                    <a className="link link-hover">Jobs</a>
-                    <a className="link link-hover">Press kit</a>
+                    <Link className='link-hover' to='/about'>About us</Link>
+                    <Link className='link-hover' to='/contact'>Contact</Link>
                 </div>
                 <div>
                     <span className="footer-title">Legal</span>
-                    <a className="link link-hover">Terms of use</a>
-                    <a className="link link-hover">Privacy policy</a>
-                    <a className="link link-hover">Cookie policy</a>
+                    <Link className='link-hover' to=''>Terms of use</Link>
+                    <Link className='link-hover' to=''>Privacy policy</Link>
                 </div>
             </footer>
             <footer className="footer items-center p-4 bg-neutral text-neutral-content">

@@ -4,12 +4,12 @@ const Bannar = () => {
     return (
         <div className="carousel w-full">
             <div id="slide1" className="carousel-item relative h-screen w-full">
-                <div className='hero min-h-screen' style={{ backgroundImage: `url("https://i.ibb.co/FwsXFvc/10.jpg")` }}>
+                <div className='hero min-h-screen' style={{ backgroundImage: `url("https://i.ibb.co/0VDxqQV/81-Bet69-RFOL-AC-SX679.jpg")` }}>
                     <div className="hero-overlay bg-opacity-60"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div className="max-w-md">
-                            <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-                            <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                            <h1 className="mb-5 text-5xl font-bold">Sports Cars</h1>
+                            <p className="mb-5">LEGO Creator 3in1 Sports Car Toy.</p>
                             <button className="btn btn-primary">Get Started</button>
                         </div>
                     </div>
@@ -20,12 +20,12 @@ const Bannar = () => {
                 </div>
             </div>
             <div id="slide2" className="carousel-item relative h-screen w-full">
-                <div className='hero min-h-screen' style={{ backgroundImage: `url("https://i.ibb.co/M1XgrK6/9.jpg")` }}>
+                <div className='hero min-h-screen' style={{ backgroundImage: `url("https://i.ibb.co/jk8t5Y7/61-Yi-HOa-Ff5-L-AC-SX679.jpg")` }}>
                     <div className="hero-overlay bg-opacity-60"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div className="max-w-md">
-                            <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-                            <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                            <h1 className="mb-5 text-5xl font-bold">Police Car</h1>
+                            <p className="mb-5">Charger Police Car Die-Cast Car.</p>
                             <button className="btn btn-primary">Get Started</button>
                         </div>
                     </div>
@@ -36,12 +36,12 @@ const Bannar = () => {
                 </div>
             </div>
             <div id="slide3" className="carousel-item relative h-screen w-full">
-                <div className='hero min-h-screen' style={{ backgroundImage: `url("https://i.ibb.co/QbrKBNP/8.jpg")` }}>
+                <div className='hero min-h-screen' style={{ backgroundImage: `url("https://i.ibb.co/YtBCfrz/71-Nt2-K5-Ss-ML-AC-SX679.jpg")` }}>
                     <div className="hero-overlay bg-opacity-60"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div className="max-w-md">
-                            <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-                            <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                            <h1 className="mb-5 text-5xl font-bold">Truck</h1>
+                            <p className="mb-5">John Deere Sandbox Toys Vehicle Set - Includes Dump Truck Toy.</p>
                             <button className="btn btn-primary">Get Started</button>
                         </div>
                     </div>
@@ -52,12 +52,12 @@ const Bannar = () => {
                 </div>
             </div>
             <div id="slide4" className="carousel-item relative h-screen w-full">
-                <div className='hero min-h-screen' style={{ backgroundImage: `url("https://i.ibb.co/rZDvPjh/6.jpg")` }}>
+                <div className='hero min-h-screen' style={{ backgroundImage: `url("https://i.ibb.co/RYW4N8z/71jr-SZJji-HL-AC-SX679.jpg")` }}>
                     <div className="hero-overlay bg-opacity-60"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div className="max-w-md">
-                            <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-                            <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                            <h1 className="mb-5 text-5xl font-bold">Police Car</h1>
+                            <p className="mb-5">Micro Police SUV.</p>
                             <button className="btn btn-primary">Get Started</button>
                         </div>
                     </div>
