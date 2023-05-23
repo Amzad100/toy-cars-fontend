@@ -3,6 +3,7 @@ import Header from '../Shared/Header/Header';
 import Footer from '../Shared/Footer/Footer';
 import { useForm } from "react-hook-form";
 import { Authcontext } from '../../Providers/AuthProvider';
+import Swal from 'sweetalert2'
 
 const Addtoy = () => {
     const { user } = useContext(Authcontext)
@@ -16,6 +17,14 @@ const Addtoy = () => {
             .then(res => res.json())
             .then(result => {
                 console.log(result);
+                if (result.insertedId) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Toy is added successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Ok'
+                    })
+                }
             })
         console.log(data);
     }

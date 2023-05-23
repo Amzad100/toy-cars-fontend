@@ -19,7 +19,7 @@ const ShopByCategory = () => {
 
     return (
         <div className='text-center'>
-            <h1 className='text-center text-3xl font-bold my-5'>Shop By Category : {cars.length}</h1>
+            <h1 className='text-center text-3xl font-bold my-5'>Shop By Category</h1>
             <div className="tabs tabs-boxed text-center">
                 <div onClick={() => handleTabClick("SportsCars")} className={`tab ${activeTab == "SportsCars" ? "tab-active" : ""}`}>
                     Sports Cars
