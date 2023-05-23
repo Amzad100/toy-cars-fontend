@@ -82,8 +82,6 @@ const Addtoy = () => {
                     </div>
                     {/* errors will return when field validation fails  */}
                     {errors.exampleRequired && <span>This field is required</span>}
-
-
                 </form>
             </div>
             <Footer></Footer>
